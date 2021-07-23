@@ -1,0 +1,29 @@
+input,button{
+    outline:none;
+    background-color: white;
+    border: none;
+    padding:0.5rem 1rem;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+img{
+    height: 0.7rem;
+}
+
+input{
+    border-left: 1px solid #E5E5E5;
+}
+
+button{
+    border-right: 1px solid #E5E5E5;
+
+}
+
+button:hover{
+    cursor: pointer ;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
