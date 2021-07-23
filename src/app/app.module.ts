@@ -7,12 +7,14 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
