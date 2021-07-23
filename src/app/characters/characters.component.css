@@ -54,6 +54,10 @@ tr{
   font-size: 12px;
 }
 
+#buttonName:hover{
+  cursor:pointer;
+}
+
 /* BORDER RADIUS LINHA DE TABELA */
 
 table td:first-child {

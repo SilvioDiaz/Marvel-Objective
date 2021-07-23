@@ -9,7 +9,10 @@
         currentPage:currentPage,
         totalItems:pageNumbers
     }"> 
-        <td class="tableRow" id = "heroName"> <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >{{character.name}}</td>
+        <td class="tableRow" id = "heroName">
+             <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >
+             <div [routerLink] = "['/character', character.id]" id="buttonName">{{character.name}}</div>
+        </td>
         <td class="tableRow" id="heroSeries">
 
             <div *ngFor = "let serie of character.series.items; let i=index"> 

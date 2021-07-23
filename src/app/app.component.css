@@ -27,6 +27,10 @@ img{
     width: 10rem;
 }
 
+img:hover{
+    cursor:pointer
+}
+
 .content{
     background-color: #e5e5e5;
     padding:1rem 10rem;
