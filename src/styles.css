@@ -10,7 +10,7 @@ body{
     background-color: #e5e5e5;
 }
 
-h1,h2,h3,p,td,th{
+h1,h2,h3,h5,p,td,th{
     font-family: 'PT Sans Caption', sans-serif;
     color:#555555;
 }
