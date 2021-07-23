@@ -23,18 +23,18 @@ export class ServerService {
     let params:any
 
     if(page > 1){ //Se não for primeira pagina
-      offSet = (page * 10) - 10
+      offSet = (page * 5) - 5
     }else{ //Caso seja primeira pagina, começa a requisição do começo
       offSet = 0
     }
 
     let data = { //Parametro para requisição geral
-      limit:10,
+      limit:5,
       offset:offSet
     }
 
     let searchData = { // Parametros para busca de personagem
-      limit:10,
+      limit:5,
       offset:offSet,
       nameStartsWith:search
     }

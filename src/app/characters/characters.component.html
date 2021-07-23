@@ -1,16 +1,16 @@
 <table>
-    <tr>
-        <th>Nome</th>
-        <th>Series</th>
-        <th>Eventos</th>
+    <tr id="tableHeader">
+        <td>Personagem</td>
+        <td>Series</td>
+        <td>Eventos</td>
     </tr>
-    <tr *ngFor="let character of allCharacters | async | paginate: {
-        itemsPerPage: 10,
+    <tr  *ngFor="let character of allCharacters | async | paginate: {
+        itemsPerPage: 5,
         currentPage:currentPage,
         totalItems:pageNumbers
     }"> 
-        <td> <img style="width:5%" src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >{{character.name}}</td>
-        <td>
+        <td class="tableRow" id = "heroName"> <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >{{character.name}}</td>
+        <td class="tableRow" id="heroSeries">
 
             <div *ngFor = "let serie of character.series.items; let i=index"> 
                 <div *ngIf="i <3">
@@ -19,11 +19,16 @@
             </div>
         </td>
 
-        <div *ngFor = "let event of character.events.items; let i=index"> 
-            <div *ngIf="i <3">
-                <td>{{event.name}}</td>
+        <td class="tableRow" id = "heroEvents">
+
+            <div *ngFor = "let event of character.events.items; let i=index"> 
+                <div *ngIf="i <3">
+                    {{event.name? event.name:"teste"}}
+                </div>
             </div>
-        </div>
+
+        </td>
+
         
     </tr>
 </table>

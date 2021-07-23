@@ -1,14 +1,49 @@
 table{
   border-collapse:separate;
   border-spacing:0 10px;
+  empty-cells: show;
 }
 
 td, th {
-    padding: 0.5rem;
+    width: 20rem;
+    padding:0.5rem;
   }
 
 tr{
-    background-color: aqua;
+    background-color: white;
+    /* box-shadow: 0px 0px 5px #00000033; */
+    border-radius: 3%;
+}
+
+#imgHero{
+  width: 15%;
+  border-radius: 10%;
+  margin-right: 1rem;
+}
+
+#heroName{
+  display:flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+#heroEvents,#heroSeries{
+  font-size: small;
+}
+
+.tableRow{
+  height: 5rem;
+  color:#555555;
+}
+
+
+#tableHeader{
+  background: none;
+  box-shadow: none;
+  color: #8e8e8e;
+  font-size: small;
+  padding: 0;
+  height: 0;
 }
 
 
