@@ -18,8 +18,9 @@ export class ServerService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCharacters(page:number):Observable<any>{ //Requisição de lista com todos os personagens
+  getAllCharacters(page:number,search:string):Observable<any>{ //Requisição de lista com todos os personagens
     let offSet:number
+    let params:any
 
     if(page > 1){ //Se não for primeira pagina
       offSet = (page * 10) - 10
@@ -27,13 +28,24 @@ export class ServerService {
       offSet = 0
     }
 
-    let data = {
+    let data = { //Parametro para requisição geral
       limit:10,
       offset:offSet
     }
 
-    let params = new HttpParams({fromObject:data})
+    let searchData = { // Parametros para busca de personagem
+      limit:10,
+      offset:offSet,
+      nameStartsWith:search
+    }
 
+    if(search){
+      params = new HttpParams({fromObject:searchData})
+    }else{
+      params = new HttpParams({fromObject:data})
+    }
+
+    
     return this.http.get<any>(`${this.URL_API}/v1/public/characters${this.AUTH}`, {params:params})   
 
   }

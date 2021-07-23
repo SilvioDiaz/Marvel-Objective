@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { CharactersComponent } from '../characters/characters.component';
 
 @Component({
@@ -6,11 +6,11 @@ import { CharactersComponent } from '../characters/characters.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  @ViewChild(CharactersComponent ) child: CharactersComponent ; 
 
-  constructor() { }
-
-  ngOnInit(): void {
+  search(text:string){
+    this.child.searchHero(text)
   }
 
 }
