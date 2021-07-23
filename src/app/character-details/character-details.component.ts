@@ -22,4 +22,5 @@ export class CharacterDetailsComponent implements OnInit {
   getDetails(){
     this.characterDetails = this.detailsSvc.getCharacterDetails(this.id)
   }
+  
 }

@@ -55,4 +55,11 @@ export class ServerService {
     .pipe(map((data:any) => data.data.results))
   }
 
+  getCharacterEvents(id:string): Observable<any> {
+    let params = new HttpParams().set('characters', id)
+
+    return this.http.get<any>(`${this.URL_API}/v1/public/events${this.AUTH}`, {params:params})
+    .pipe(map((data:any) => data.data.results))
+  }
+
 }

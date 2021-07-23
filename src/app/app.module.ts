@@ -8,13 +8,15 @@ import { CharacterDetailsComponent } from './character-details/character-details
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HomeComponent } from './home/home.component';
+import { CharacterEventsComponent } from './character-events/character-events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CharacterDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    CharacterEventsComponent
   ],
   imports: [
     BrowserModule,

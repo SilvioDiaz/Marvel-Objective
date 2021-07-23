@@ -1,0 +1,5 @@
+<div *ngFor = "let events of characterEvents | async">
+    <h2>{{events.title}}</h2>
+    <p>{{events.description? events.description:"Nenhuma descrição encontrada"}}</p>
+    <img src = {{events.thumbnail.path}}.{{events.thumbnail.extension}}/>
+</div>
