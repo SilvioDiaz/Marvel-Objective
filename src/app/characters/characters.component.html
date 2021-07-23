@@ -1,7 +1,5 @@
-<p>characters works!</p>
-
 <div *ngFor="let character of allCharacters | async" > 
 
-<h1>{{character.name}}</h1>
+<h1  [routerLink] = "['/character',character.id]" >{{character.name}}</h1>
 
 </div>
