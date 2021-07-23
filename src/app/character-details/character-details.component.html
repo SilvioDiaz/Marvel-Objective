@@ -1,1 +1,4 @@
-<p>character-details works!</p>
+<div *ngFor = "let character of characterDetails | async">
+    <h1>{{character.name}}</h1>
+    <p>{{character.description? character.description:"Nenhuma descrição encontrada"}}</p>
+</div>
