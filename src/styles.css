@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+
 body{
     background-color: #e5e5e5;
+}
+
+h1,h2,h3,p,td,th{
+    font-family: 'PT Sans Caption', sans-serif;
 }
