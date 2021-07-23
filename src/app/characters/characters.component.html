@@ -1,7 +1,7 @@
 <table class="table-curved">
     <tr id="tableHeader">
         <td>Personagem</td>
-        <td>Series</td>
+        <td>Séries</td>
         <td>Eventos</td>
     </tr>
     <tr  *ngFor="let character of allCharacters | async | paginate: {
@@ -32,6 +32,16 @@
         
     </tr>
 </table>
+<div class ="paginationArea">
+    <pagination-controls
+        previousLabel="<"
+        nextLabel=">"
+        [directionLinks] = true
+        (pageChange)="currentPage = $event; pageChange($event)"
+     
+    >
 
-<pagination-controls (pageChange)="currentPage = $event; pageChange($event)"></pagination-controls>
+    </pagination-controls>
+</div>
+
 
