@@ -1,9 +1,11 @@
 <table class="table-curved">
+
     <tr id="tableHeader">
         <td>Personagem</td>
         <td>Séries</td>
         <td>Eventos</td>
     </tr>
+
     <tr  *ngFor="let character of allCharacters | async | paginate: {
         itemsPerPage: 5,
         currentPage:currentPage,
@@ -13,8 +15,8 @@
              <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >
              <div [routerLink] = "['/character', character.id]" id="buttonName">{{character.name}}</div>
         </td>
-        <td class="tableRow" id="heroSeries">
 
+        <td class="tableRow" id="heroSeries">
             <div *ngFor = "let serie of character.series.items; let i=index"> 
                 <div *ngIf="i <3">
                     {{serie.name}}
@@ -23,19 +25,18 @@
         </td>
 
         <td class="tableRow" id = "heroEvents">
-
             <div *ngFor = "let event of character.events.items; let i=index"> 
                 <div *ngIf="i <3">
                     {{event.name? event.name:"teste"}}
                 </div>
             </div>
-
         </td>
-
-        
     </tr>
+
 </table>
+
 <div class ="paginationArea">
+    
     <pagination-controls
         previousLabel="<"
         nextLabel=">"
