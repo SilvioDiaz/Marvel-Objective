@@ -19,7 +19,7 @@ export class ServerService {
   constructor(private http: HttpClient) { }
 
   getAllCharacters():Observable<any>{ //Requisição de lista com todos os personagens
-    return this.http.get<any>(`${this.URL_API}/v1/public/characters${this.AUTH}`, {params:params})   
+    return this.http.get<any>(`${this.URL_API}/v1/public/characters${this.AUTH}`)   
 
   }
 
