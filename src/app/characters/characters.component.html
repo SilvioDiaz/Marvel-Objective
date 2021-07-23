@@ -1,11 +1,32 @@
-<div *ngFor="let character of allCharacters | async | paginate: {
-    itemsPerPage: 10,
-    currentPage:currentPage,
-    totalItems:pageNumbers
-}"> 
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Series</th>
+        <th>Eventos</th>
+    </tr>
+    <tr *ngFor="let character of allCharacters | async | paginate: {
+        itemsPerPage: 10,
+        currentPage:currentPage,
+        totalItems:pageNumbers
+    }"> 
+        <td> <img style="width:5%" src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >{{character.name}}</td>
+        <td>
 
-<h1  [routerLink] = "['/character',character.id]" >{{character.name}}</h1>
+            <div *ngFor = "let serie of character.series.items; let i=index"> 
+                <div *ngIf="i <3">
+                    {{serie.name}}
+                </div>
+            </div>
+        </td>
 
-</div>
+        <div *ngFor = "let event of character.events.items; let i=index"> 
+            <div *ngIf="i <3">
+                <td>{{event.name}}</td>
+            </div>
+        </div>
+        
+    </tr>
+</table>
 
 <pagination-controls (pageChange)="currentPage = $event; pageChange($event)"></pagination-controls>
+

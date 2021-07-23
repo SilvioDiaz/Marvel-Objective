@@ -1,0 +1,14 @@
+table{
+  border-collapse:separate;
+  border-spacing:0 10px;
+}
+
+td, th {
+    padding: 0.5rem;
+  }
+
+tr{
+    background-color: aqua;
+}
+
+
