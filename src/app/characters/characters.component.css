@@ -4,15 +4,31 @@ table{
   empty-cells: show;
 }
 
+table td:first-child {
+  border-radius: 6px 0 0 6px;
+}
+table td:last-child {
+  border-radius: 0 6px 6px 0px;
+}
+table td:only-child{
+  border-radius: 6px 6px 0 6px;
+}
+
+
 td, th {
     width: 20rem;
     padding:0.5rem;
   }
 
 tr{
-    background-color: white;
-    /* box-shadow: 0px 0px 5px #00000033; */
+    box-shadow: 0px 0px 5px #00000033;
     border-radius: 3%;
+}
+
+.tableRow{
+  height: 6rem;
+  color:#555555;
+  background-color: white;
 }
 
 #imgHero{
@@ -30,12 +46,6 @@ tr{
 #heroEvents,#heroSeries{
   font-size: small;
 }
-
-.tableRow{
-  height: 5rem;
-  color:#555555;
-}
-
 
 #tableHeader{
   background: none;
