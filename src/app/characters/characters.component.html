@@ -1,5 +1,11 @@
-<div *ngFor="let character of allCharacters | async" > 
+<div *ngFor="let character of allCharacters | async | paginate: {
+    itemsPerPage: 10,
+    currentPage:currentPage,
+    totalItems:pageNumbers
+}"> 
 
 <h1  [routerLink] = "['/character',character.id]" >{{character.name}}</h1>
 
 </div>
+
+<pagination-controls (pageChange)="currentPage = $event; pageChange($event)"></pagination-controls>
