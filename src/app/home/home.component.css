@@ -46,6 +46,10 @@ button:hover{
     justify-content: center;
 }
 
+#searchForm{
+    display: flex;
+}
+
 ::-webkit-input-placeholder {
     font-style: italic;
     font-family: 'PT Sans Caption', sans-serif;
@@ -58,6 +62,10 @@ button:hover{
       flex-direction: column;
       justify-content: center;
       text-align: center;
+    }
+
+    #searchForm{
+        width: 95vw;
     }
 
     #heroName{
