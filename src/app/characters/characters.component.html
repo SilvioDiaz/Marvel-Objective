@@ -13,7 +13,7 @@
     }"> 
         <td class="tableRow" >
             <div id = "heroName">
-                <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >
+                <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} alt={{character.name}} >
                 <div [routerLink] = "['/character', character.id]" id="buttonName">{{character.name}}</div>
             </div>
 

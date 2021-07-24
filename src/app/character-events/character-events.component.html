@@ -2,7 +2,7 @@
 
 <div *ngFor = "let events of characterEvents | async">
     <div id = "eventCard">
-        <img id="eventImg" src = {{events.thumbnail.path}}.{{events.thumbnail.extension}}/>
+        <img id="eventImg" src = {{events.thumbnail.path}}.{{events.thumbnail.extension}} alt={{events.title}}/>
         <div id = "eventDetails">
             <h2>{{events.title}}</h2>
             <p id="eventsDescription">{{events.description}}</p>
