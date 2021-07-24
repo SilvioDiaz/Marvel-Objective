@@ -12,11 +12,11 @@ export class CharactersComponent implements OnInit {
 
   constructor(private charactersSvc:ServerService) { }
 
-  allCharacters: Observable<any>
-  characters:Observable<any>
-  pageNumbers:number
-  currentPage: number = 1
-  heroName: string
+  allCharacters: Observable<any> //Recebe Requisição
+  characters:Observable<any> //Armazena personagens
+  pageNumbers:number //Número total de paginas
+  currentPage: number = 1 //Pagina atual
+  heroName: string //Recebe valor de pesquisa
 
   ngOnInit(): void {
     this.getCharacters()
