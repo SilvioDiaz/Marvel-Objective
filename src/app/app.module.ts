@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HomeComponent } from './home/home.component';
 import { CharacterEventsComponent } from './character-events/character-events.component';
+import { CharacterSeriesComponent } from './character-series/character-series.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CharacterEventsComponent } from './character-events/character-events.co
     CharactersComponent,
     CharacterDetailsComponent,
     HomeComponent,
-    CharacterEventsComponent
+    CharacterEventsComponent,
+    CharacterSeriesComponent
   ],
   imports: [
     BrowserModule,

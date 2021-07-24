@@ -1,0 +1,19 @@
+<h1>Series</h1>
+<div id="seriesArea" *ngFor = "let series of characterSeries | async">
+    <div id="seriesCard">
+        <img id="seriesImg" src = {{series.thumbnail.path}}.{{series.thumbnail.extension}}/>
+        <div id="seriesDetail">
+            <h1>{{series.title}}</h1>
+            <p>{{series.description}}</p>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div *ngIf ="countSeries < 1">
+    <h3>Nenhuma série encontrada</h3>
+</div>
+
