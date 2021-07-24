@@ -1,5 +1,6 @@
 #characterArea{
     display: flex;
+    width: 100%;
 }
 
 #characterPosition{
@@ -9,7 +10,7 @@
 
 #characterCard{
     padding: 1rem;
-    height: 25vw;
+    height: 45vh;
     width: 30vw;
     border: 2px solid black;
     display:flex;
@@ -27,9 +28,16 @@
 }
 
 #eventArea{
-    display: grid;
-    grid-template-rows: 1fr; 
-    margin: 0 1rem;
-    height: 25vw;
+    height: 45vh;
+    padding:0 1rem;
     overflow: auto;
+}
+
+#seriesArea{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 40vh;
+    width: 100%;
+    margin: 1rem 0;
 }

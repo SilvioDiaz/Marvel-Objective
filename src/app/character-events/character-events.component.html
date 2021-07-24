@@ -1,3 +1,5 @@
+<h1>Eventos</h1>
+
 <div *ngFor = "let events of characterEvents | async">
     <div id = "eventCard">
         <img id="eventImg" src = {{events.thumbnail.path}}.{{events.thumbnail.extension}}/>

@@ -7,7 +7,9 @@
 }
 
 #eventImg{
-    height: 10rem;
+    background-size: cover;
+    background-position:center;
+    width: 10rem;
 }
 
 #eventDetails{

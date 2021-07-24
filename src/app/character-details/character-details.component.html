@@ -9,14 +9,16 @@
             <div id="characterPosition">
                 <div id="characterDetail">
                     <h1 id="characterName">{{character.name}}</h1>
-                    <p id="characterDescription">{{character.description? character.description:"Nenhuma descrição encontrada"}}</p>
+                    <p id="characterDescription">{{character.description}}</p>
                 </div>
             </div>
 
         </div>
     </div>
-    <div id = "eventArea">
-        <app-character-events></app-character-events>
-    </div>
-
+    <app-character-events id = "eventArea"></app-character-events>
 </div>
+
+    <app-character-series id = "seriesArea"></app-character-series>
+
+
+
