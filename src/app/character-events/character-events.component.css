@@ -1,0 +1,15 @@
+#eventCard{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+#eventImg{
+    height: 10rem;
+}
+
+#eventDetails{
+    padding: 1rem;
+}
