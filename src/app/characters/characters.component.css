@@ -102,11 +102,11 @@ pagination-controls /deep/ li a:hover{
   }
 
   #imgHero{
-    width: 50%;
+    width: 40%;
   }
 
   #heroEvents,#heroSeries{
-    width: 50%;
+    width: 30%;
   }
 }
 
