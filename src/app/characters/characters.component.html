@@ -6,7 +6,7 @@
         <td>Eventos</td>
     </tr>
 
-    <tr  *ngFor="let character of allCharacters | async | paginate: {
+    <tr  *ngFor="let character of characters | async | paginate: {
         itemsPerPage: 5,
         currentPage:currentPage,
         totalItems:pageNumbers
@@ -27,7 +27,7 @@
         <td class="tableRow" id = "heroEvents">
             <div *ngFor = "let event of character.events.items; let i=index"> 
                 <div *ngIf="i <3">
-                    {{event.name? event.name:"teste"}}
+                    {{event.name}}
                 </div>
             </div>
         </td>
@@ -36,7 +36,7 @@
 </table>
 
 <div class ="paginationArea">
-    
+
     <pagination-controls
         previousLabel="<"
         nextLabel=">"
