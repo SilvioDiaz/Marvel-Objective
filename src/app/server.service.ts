@@ -13,7 +13,7 @@ export class ServerService {
   HASH = "4ea7f3a87a87891d7e47375c5b4fe3ad"
   URL_API = `https://gateway.marvel.com`
 
-  AUTH = `?ts=${this.TIME_STAMP}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`
+  AUTH = `ts=${this.TIME_STAMP}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`
 
 
   constructor(private http: HttpClient) { }
@@ -46,7 +46,7 @@ export class ServerService {
     }
 
     
-    return this.http.get<any>(`${this.URL_API}/v1/public/characters${this.AUTH}`, {params:params})   
+    return this.http.get<any>(`${this.URL_API}/v1/public/characters?${this.AUTH}`, {params:params})   
 
   }
 
@@ -55,17 +55,17 @@ export class ServerService {
     .pipe(map((data:any) => data.data.results))
   }
 
-  getCharacterEvents(id:string): Observable<any> {
+  getCharacterEvents(id:string): Observable<any> { //Requisição de eventos do personagem
     let params = new HttpParams().set('characters', id)
 
-    return this.http.get<any>(`${this.URL_API}/v1/public/events${this.AUTH}`, {params:params})
+    return this.http.get<any>(`${this.URL_API}/v1/public/events?${this.AUTH}`, {params:params})
     .pipe(map((data:any) => data.data))
   }
 
-  getCharacterSeries(id:string): Observable<any> {
+  getCharacterSeries(id:string): Observable<any> { //Requisição de series do personagem
     let params = new HttpParams().set('characters', id)
 
-    return this.http.get<any>(`${this.URL_API}/v1/public/series${this.AUTH}`, {params:params})
+    return this.http.get<any>(`${this.URL_API}/v1/public/series?${this.AUTH}`, {params:params})
     .pipe(map((data:any) => data.data))
   }
 
