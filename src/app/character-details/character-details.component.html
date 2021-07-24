@@ -1,4 +1,5 @@
 <div id="characterArea">
+
     <div  *ngFor = "let character of characterDetails | async">
 
         <div id="characterCard"
@@ -11,8 +12,8 @@
                     <h1 id="characterName">{{character.name}}</h1>
                 </div>
             </div>
-
         </div>
+
     </div>
     <app-character-events id = "eventArea"></app-character-events>
 </div>

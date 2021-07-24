@@ -1,5 +1,7 @@
 <h1>Series</h1>
+
 <div id="seriesArea" *ngFor = "let series of characterSeries | async">
+
     <div id="seriesCard">
         <img id="seriesImg" src = {{series.thumbnail.path}}.{{series.thumbnail.extension}} alt={{series.title}}/>
         <div id="seriesDetail">
@@ -8,8 +10,6 @@
         </div>
 
     </div>
-
-
 
 </div>
 
