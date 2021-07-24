@@ -11,9 +11,12 @@
         currentPage:currentPage,
         totalItems:pageNumbers
     }"> 
-        <td class="tableRow" id = "heroName">
-             <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >
-             <div [routerLink] = "['/character', character.id]" id="buttonName">{{character.name}}</div>
+        <td class="tableRow" >
+            <div id = "heroName">
+                <img id="imgHero"src = {{character.thumbnail.path}}.{{character.thumbnail.extension}} >
+                <div [routerLink] = "['/character', character.id]" id="buttonName">{{character.name}}</div>
+            </div>
+
         </td>
 
         <td class="tableRow" id="heroSeries">
