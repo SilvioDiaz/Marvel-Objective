@@ -1,5 +1,13 @@
-<div *ngFor = "let events of characterEvents | async">
-    <h2>{{events.title}}</h2>
-    <p>{{events.description? events.description:"Nenhuma descrição encontrada"}}</p>
-    <img src = {{events.thumbnail.path}}.{{events.thumbnail.extension}}/>
+<div>
+    <h2>Eventos</h2>
+    <div *ngFor = "let events of characterEvents | async">
+        <h2>{{events.title}}</h2>
+        <p>{{events.description? events.description:"Nenhuma descrição encontrada"}}</p>
+        <img src = {{events.thumbnail.path}}.{{events.thumbnail.extension}}/>
+
+    </div>
+
+    <div *ngIf ="countEvents < 1">
+        <h3>Nenhum evento encontrado</h3>
+    </div>
 </div>
