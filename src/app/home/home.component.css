@@ -2,7 +2,7 @@ input,button{
     outline:none;
     background-color: white;
     border: none;
-    padding:0.5rem 0.5rem;
+    padding:1rem 0.5rem;
     border-top: 1px solid #E5E5E5;
     border-bottom: 1px solid #E5E5E5;
 }
@@ -34,14 +34,33 @@ input{
 button{
     border-radius: 0 5px 5px 0;
     border-right: 1px solid #E5E5E5;
-
 }
 
 button:hover{
     cursor: pointer ;
 }
 
+#areaCharacter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 ::-webkit-input-placeholder {
     font-style: italic;
     font-family: 'PT Sans Caption', sans-serif;
  }
+
+ @media only screen and  (max-width:480px){
+    #searchArea{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #heroName{
+        width:90%
+    }
+  }
+  

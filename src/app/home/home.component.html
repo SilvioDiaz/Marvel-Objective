@@ -1,8 +1,18 @@
 
-<h1>Busca de personagem</h1>
-<h3>Nome do personagem</h3>
+<div id="searchArea">
+    <h1>Busca de personagem</h1>
+    <h3>Nome do personagem</h3>
+    
+    <div>
+        <input placeholder="Search" type="text" id="heroName" name="heroName" #heroName />
+        <button type="button" (click)="search(heroName.value)">
+            <img src="../../assets/Image/search.png" alt="search"/>
+        </button>
+    </div>
 
-<input placeholder="Search" type="text" id="heroName" name="heroName" #heroName />
-<button type="button" (click)="search(heroName.value)"><img src="../../assets/Image/search.png" alt="search"/>
-</button>
+    
+</div>
+
+<div id="areaCharacter">
 <app-characters></app-characters>
+</div>

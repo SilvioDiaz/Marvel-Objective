@@ -2,8 +2,8 @@
 
     <tr id="tableHeader">
         <td>Personagem</td>
-        <td>Séries</td>
-        <td>Eventos</td>
+        <td class="tdMobile">Séries</td>
+        <td class="tdMobile">Eventos</td>
     </tr>
 
     <tr  *ngFor="let character of characters | async | paginate: {
@@ -38,9 +38,10 @@
 <div class ="paginationArea">
 
     <pagination-controls
-        previousLabel="<"
-        nextLabel=">"
         [directionLinks] = true
+        [maxSize]=7
+        [autoHide]=true
+        [directionLinks]=false
         (pageChange)="currentPage = $event; pageChange($event)"
      
     >

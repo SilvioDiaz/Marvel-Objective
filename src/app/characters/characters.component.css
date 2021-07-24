@@ -74,19 +74,8 @@ table td:only-child{
 
 
 /* Caso não tenha conteudo para frente ou trás, não renderiza botão para pagina */
-pagination-controls /deep/ .disabled{
+pagination-controls /deep/ .ellipsis{
   display:none;
-}
-
-/* ... não aparece */
-pagination-controls /deep/ .ellipsis{ 
-  display:none;
-}
-
-pagination-controls /deep/ li, pagination-controls /deep/ .current{
-  padding:0.5rem;
-  border-radius: 10%;
-  margin: 0.3rem;
 }
 
 /* Ajusta tamanho e cor de botões de paginação  */
@@ -96,31 +85,35 @@ pagination-controls /deep/ .current{
   color: white;
 }
 
-pagination-controls /deep/ .current span,pagination-controls /deep/ li a{
-  padding: 0.1875rem 0.625rem;
-}
-
 pagination-controls /deep/ li{
   background: #f5f5f5;
   border: 1px solid #E5E5E5;
+  border-radius: 10%;
 }
 
 pagination-controls /deep/ li a:hover{
   background: #f5f5f5;
 }
 
-/* Remove fundo de botão para a vançar ou retroceder  */
-pagination-controls /deep/ .pagination-next,pagination-controls /deep/ .pagination-previous{
-  background: none;
-}
+/* MOBILE */
 
+@media only screen and  (max-width:480px){
+  #heroEvents,#heroSeries,.tdMobile{
+    display: none;
+  }
 
-pagination-controls /deep/ .ngx-pagination .pagination-next a::after, .ngx-pagination .pagination-next.disabled::after{
-  content: ">>"
-}
+  .paginationArea{
+    display: flex;
+    justify-content: center;
+  }
 
-pagination-controls /deep/ .ngx-pagination .pagination-previous a::before, .ngx-pagination .pagination-previous.disabled::before{
-  content: "<<"
+  td{
+    width: 90vw;
+  }
+
+  table td:first-child {
+    border-radius: 6px;
+  }
 }
 
 
