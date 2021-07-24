@@ -10,5 +10,15 @@
 }
 
 #seriesDetail{
-    padding: 1rem;
+    padding: 2rem;
+}
+
+@media only screen and  (max-width:480px){
+    #seriesCard{
+        width: 90vw;
+    }
+
+    #seriesDescription{
+        display: none;
+    }
 }
